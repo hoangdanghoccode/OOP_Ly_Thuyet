@@ -16,5 +16,29 @@ public class TruongPhong extends NhanVien {
     	  this.soNamDuongChuc=soNamDuongChuc;
       }
 
+	public double getPhuCap() {
+		return phuCap;
+	}
+
+	public void setPhuCap(double phuCap) {
+		this.phuCap = phuCap;
+	}
+
+	public int getSoNamDuongChuc() {
+		return soNamDuongChuc;
+	}
+
+	public void setSoNamDuongChuc(int soNamDuongChuc) {
+		this.soNamDuongChuc = soNamDuongChuc;
+	}
+    
+	public double tinhLuong(){
+		return this.getLuongCoBan() * this.getHeSoLuong() * phuCap;
+	}
+
+	public void inTTin(){
+		super.inTTin();
+		System.out.println(", phu cap = " + phuCap + ", so nam duong chuc = " + soNamDuongChuc);
+	}
 	
 }
