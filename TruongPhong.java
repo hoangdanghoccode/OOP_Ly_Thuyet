@@ -33,7 +33,7 @@ public class TruongPhong extends NhanVien {
 	}
     
 	public double tinhLuong(){
-		return this.getLuongCoBan() * this.getHeSoLuong() * phuCap;
+		return this.getLuongCoBan() * this.getHeSoLuong() + phuCap;
 	}
 
 	public void inTTin(){
