@@ -53,7 +53,7 @@ public class NhanVien {
     }
 
     public void inTTin(){
-        System.out.println("Nhan vien " + this.tenNhanVien +" co: "
+        System.out.print("Nhan vien " + this.tenNhanVien +" co: "
         + "luong co ban = " + luongCoBan + ", he so luong = " + this.heSoLuong
         + ", luong max = " + LUONG_MAX );
     }
