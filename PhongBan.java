@@ -7,8 +7,8 @@ public class PhongBan {
       public PhongBan(String tenPhongBan) {
     	  this.tenPhongBan = tenPhongBan;
       }
-      Stack<NhanVien> stack = new Stack<>();
-      public boolean themNV(NhanVien nv) {
+      Stack<CanBoCoHuu> stack = new Stack<>();
+      public boolean themNV(CanBoCoHuu nv) {
     	  if(soNhanVien<SO_NV_MAX) {
     		  stack.push(nv);
     		  soNhanVien++;
@@ -21,7 +21,7 @@ public class PhongBan {
     	  }
       }
       
-      public NhanVien xoaNV() {
+      public CanBoCoHuu xoaNV() {
     	  if(soNhanVien==0) System.out.println("Phong ban "+tenPhongBan+" khong con nhan vien de xoa.");
     	  else {
     		  soNhanVien--;
@@ -32,7 +32,7 @@ public class PhongBan {
       
       public double tinhTongLuong() {
     	  double tongluong=0;
-    	  for(NhanVien nv : stack) {
+    	  for(CanBoCoHuu nv : stack) {
     		  tongluong+=nv.tinhLuong();
     	  }
     	  System.out.println("Phong ban "+tenPhongBan+" co tong luong la: "+tongluong);
@@ -41,7 +41,7 @@ public class PhongBan {
       
       public void inTTin() {
     	  System.out.println("Phong Ban "+tenPhongBan+ " co " + soNhanVien + " nhan vien:");
-    	  for(NhanVien nv: stack) {
+    	  for(CanBoCoHuu nv: stack) {
     		  nv.inTTin();
     	  }
       }
